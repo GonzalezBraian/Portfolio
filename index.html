@@ -6,13 +6,14 @@
     <title>Gonzalez Braian</title>
     <link rel="stylesheet" href="./css/Fonts.css">
     <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="./slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css">
 </head>
 <body>
     <header class="header">
         <nav class="navBar">
             <ul>
-                <li class="headerLink" data-section="home"><a href="#">HOME</a></li>
+                <li class="headerLink active" data-section="home"><a href="#">HOME</a></li>
                 <li class="headerLink" data-section="info"><a href="#">INFO</a></li>
                 <li class="headerLink" data-section="proyects"><a href="#">PROYECTOS</a></li>
                 <li class="headerLink" data-section="contact"><a href="#">CONTACTO</a></li>
@@ -20,18 +21,20 @@
             </ul>
         </nav>
     </header>
+
+    
     <main class="main">
         <aside class="aside">
-            <h3 class="socialmediaText">SOCIAL <span>MEDIA</span></h3>
+            <figure class="socialMediaText">
+                <img src="./files/socialMedia.svg" alt="">
+            </figure>
             <nav class="socialmedia">
-                <figure>
-                    <a href="https://www.linkedin.com/in/gonzalezbraian/" target="_blank"><img src="./files/linkedinLogo.svg" alt="Linkedin"></a>
-                    <a href="mailto:gonzalezbraianm@gmail.com"><img src="./files/mailLogo.svg" alt="Mail"></a>
-                    <a href="https://github.com/GonzalezBraian"><img src="./files/githubLogo.svg" alt="Github"></a>
-                    <a href="tel:+5492233048639"><img src="./files/whatsappLogo.svg" alt="Whatsapp"></a>
-                    <a href="https://www.instagram.com/aiwindev/"><img src="./files/instagramLogo.svg" alt="Instagram"></a>
-                    <div class="deco2"></div>
-                </figure>
+                <a href="https://www.linkedin.com/in/gonzalezbraian/" target="_blank"><img src="./files/linkedinLogo.svg" alt="Linkedin"></a>
+                <a href="mailto:gonzalezbraianm@gmail.com"><img src="./files/mailLogo.svg" alt="Mail"></a>
+                <a href="https://github.com/GonzalezBraian"><img src="./files/githubLogo.svg" alt="Github"></a>
+                <a href="tel:+5492233048639"><img src="./files/whatsappLogo.svg" alt="Whatsapp"></a>
+                <a href="https://www.instagram.com/aiwindev/"><img src="./files/instagramLogo.svg" alt="Instagram"></a>
+                <div class="deco2"></div>        
             </nav>
         </aside>
         <div id="home" class="home show">
@@ -45,13 +48,13 @@
             <h2><span>INFO</span></h2>
             <div class="infoContainer">
                 <h3>
-                    Lorem ipsum dolor sit amet consectetur adipiscing elit lacinia mus netus, nibh rhoncus id habitant 
-                    vestibulum urna etiam sodales morbi. Dictum maecenas viverra tortor massa libero vestibulum
-                    laoreet placerat, duis integer nostra fringilla imperdiet magnis interdum risus facilisis, 
-                    eros condimentum mattis aliquam ultricies suspendisse nullam. 
-                    Ridiculus litora bibendum malesuada erat phasellus feugiat aenean sollicitudin, hac nam risus 
-                    class ligula tempus velit, nostra dui tristique platea 
-                    congue dis viverra.
+                    ¡Hola! Soy Fullstack Developer comencé mi viaje en el desarrollo web en 2021. 
+                    Mi experiencia abarca tanto el front-end como el back-end, 
+                    Mis conocimientos de diseño gráfico me permitieron mejorar mis habilidades en el Front
+                    permitiéndome crear soluciones tecnológicas completas y funcionales,
+                    puliendo esta misma con cursos de Testing y de Accesibilidad Web.
+                    Me emociona crear experiencias digitales excepcionales en cada detalle. 
+                    Lo que me distingue es mi entusiasmo y mis ganas de perfeccionarme cada día más.
                 </h3>
                 <a class="btn" href="path_to_file" download="proposed_file_name">Curriculum</a>
             </div>
@@ -60,19 +63,19 @@
             <h2><span>PROYECTOS</h2>
             <div class="proyectsContainer">
                 <article class="proyectItem">
-                    <a href="#"><img src="" alt=""></a>
+                    <a target="_blank" href="https://te-regalo-el-cielo-yz8r.vercel.app/"><img src="./files/teRegaloElCielo.png" alt=""></a>
                 </article>
                 <article class="proyectItem">
-                    <a href="#"><img src="" alt=""></a>
+                    <a target="_blank" href="https://cat-store-aho9fosee-csdiez.vercel.app/"><img src="./files/theCatStore.png" alt=""></a>
                 </article>
                 <article class="proyectItem">
-                    <a href="#"><img src="" alt=""></a>
+                    <a target="_blank" href="https://rgb-calculator.vercel.app/"><img src="./files/imprentaRGB.png" alt=""></a>
                 </article>
                 <article class="proyectItem">
-                    <a href="#"><img src="" alt=""></a>
+                    <a target="_blank" href="https://menu-bar-theta.vercel.app/" ><img src="./files/tuBar.png" alt=""></a>
                 </article>
                 <article class="proyectItem">
-                    <a href="#"><img src="" alt=""></a>
+                    <a target="_blank" href="https://travel-web-hazel.vercel.app/"><img src="./files/travel.png" alt=""></a>
                 </article>
                 
             </div>
@@ -123,8 +126,12 @@
             </div>
         </div>
     </main>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script>
     <script src="./index.js"></script>
 </body>
 </html>
