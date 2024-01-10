@@ -52,6 +52,9 @@ body{
 .headerLink{
   height: 100%;
 }
+.contact{
+  display: none !important;
+}
 .navBar{
   height: 100%;
   display: flex;
@@ -159,6 +162,7 @@ span{
   margin-top: 45px;
   margin-left: 20px;
   display: none;
+  flex-direction: column;
   animation: fadeInLeft 2s ease;
 }
 
@@ -190,7 +194,7 @@ span{
 }
 .proyectsContainer{
   width: 100%;
-  height: 190px;
+  height: 280px;
   display: flex;
   flex-direction: row;
   gap: 20px;
@@ -232,10 +236,11 @@ span{
   
 }
 .technologies{
-  height: 40px;
+  height: 30px;
   width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 20px;
 }
 .techLogo{
@@ -328,7 +333,7 @@ textarea::placeholder {
   color: var(--accent);
 }
 .show{
-  display: block;
+  display: flex;
 }
 
 .slick-prev,
@@ -339,9 +344,9 @@ textarea::placeholder {
   display:none;
 }
 .navFooter{
-  display: block;
+  display: none;
   position: absolute;
-  bottom: 0;
+  bottom: -34px;
   width: 100%;
   height: 10%;
   background: var(--background);
@@ -356,7 +361,9 @@ textarea::placeholder {
   filter: invert();
   height: 20px;
 }
-
+.contactNav{
+  display: none;
+}
 
 @keyframes fadeInLeft {
   0% {
@@ -370,8 +377,13 @@ textarea::placeholder {
 }   
 
 @media screen and (max-width: 768px) {
-  .navBar{
-    display:none;
+
+  .header{
+    display: none;
+  }
+  .main{
+    padding-left: 0;
+    justify-content: center;
   }
   .headerLink {
   width: fit-content;
@@ -388,8 +400,7 @@ textarea::placeholder {
     margin: auto;
     text-align: center;
   }
-  .active:after {
-  }
+  
   .home,
   .info,
   .proyects,
@@ -397,11 +408,48 @@ textarea::placeholder {
     margin-top: 20px;
     margin-left: 0px;
   }
+  .home,
+  .info{
+    margin-left: 40px;
+  }
+  .home{
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 8rem;
+  }
+  .home h3{
+    width: 80%;
+  }
+  .infoContainer {
+    width: 80%;
+  }
   .info h2{
     margin-bottom: 10px;
   }
   .infoContainer h3{
+    letter-spacing: 1px;
+    width: 100%;
+
     font-size: 16px;
+  }
+  .aside{
+    display: none;
+  }
+  .contactNav{
+    width: 100%;
+  }
+  .socialmedia{
+    margin: 0;
+    margin-right: 30px;
+    margin-top: 30px;
+    flex-direction: row;
+    justify-content: end;
+  }
+  .deco2{
+    position: relative;
+    height: 2px;
+    width: 100%;
+    background:var(--primary);
   }
   .proyectsContainer{
     flex-direction: column;
@@ -409,11 +457,15 @@ textarea::placeholder {
   .proyectItem {
     margin-top: 20px;
     background: var(--primary);
-    aspect-ratio: 16/11;
+    aspect-ratio: 16/19;
     width: 250px;
+    height: 300px;
   }
   .technologiesContainer{
-    width: 10%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   .msgContainer {
     height: 100%
@@ -430,7 +482,12 @@ textarea::placeholder {
   }
   .infoItem h3{
     font-size: 16px;
-
+  }
+  .contactNav{
+    display: block;
+  }
+  .navFooter{
+    display: block;
   }
 
   }
