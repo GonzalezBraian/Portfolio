@@ -417,7 +417,7 @@ textarea::placeholder {
   .home{
     flex-direction: column;
     justify-content: center;
-    margin-bottom: 8rem;
+    margin-bottom: 14rem;
   }
   .home h3{
     width: 80%;
