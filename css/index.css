@@ -346,7 +346,7 @@ textarea::placeholder {
 .navFooter{
   display: none;
   position: absolute;
-  bottom: 60px;
+  bottom: 40px;
   width: 100%;
   height: 10%;
   background: var(--background);
@@ -412,7 +412,7 @@ textarea::placeholder {
   }
   .home,
   .info{
-    margin-left: 40px;
+    margin-left: 20px;
   }
   .home{
     flex-direction: column;
