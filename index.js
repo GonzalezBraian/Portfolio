@@ -12,6 +12,11 @@ $(document).ready(function() {
         
     });
 
+    $(".menu").click(function () {
+      $(".extends").toggleClass("open");
+  });
+
+    
     $("#miFormulario").submit(function(event) {
         event.preventDefault(); 
 
@@ -36,8 +41,4 @@ $(document).ready(function() {
             autoplaySpeed: 2000 
         });         
     
-    function downloadFile() {
-      window.open("https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?cs=srgb&dl=pexels-pixabay-268533.jpg&fm=jpg")
-   }
-
 });
