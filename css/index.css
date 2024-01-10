@@ -161,11 +161,9 @@ span{
   display: none;
   animation: fadeInLeft 2s ease;
 }
-.contact{
-  display: none !important;
-}
+
 .infoContainer{
-  width: 85%;
+  width: 70%;
   text-align: left;
   font-family: var(--font2);
 }
@@ -229,8 +227,9 @@ span{
 }
 
 .technologiesContainer{
-  margin-top: 16rem;
+  margin-top: 4rem;
   width: calc((300px * 3)  + 40px);
+  
 }
 .technologies{
   height: 40px;
@@ -339,6 +338,25 @@ textarea::placeholder {
 .navBarMobile{
   display:none;
 }
+.navFooter{
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 10%;
+  background: var(--background);
+}
+.navFooter ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+.headerLink a img{
+  filter: invert();
+  height: 20px;
+}
+
 
 @keyframes fadeInLeft {
   0% {
@@ -352,36 +370,16 @@ textarea::placeholder {
 }   
 
 @media screen and (max-width: 768px) {
-  body{
-    overflow: scroll;
-  }
-  .main{
-    flex-direction: column;
-    height: calc(80% - 80px);
-  }
-  .aside{
-    position: fixed;
-    top: 0;
-  }
-  .home h3{
-    width: 80%;
-  }
   .navBar{
     display:none;
   }
-  .navBarMobile{
-    display:block;
-    width: 100vw;
-  }
- 
   .headerLink {
-  width: 100%;
+  width: fit-content;
   height: 15%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  border-bottom: 1px solid var(--accent);
   }
   .headerLink a{
     font-size: 22px;
@@ -390,22 +388,20 @@ textarea::placeholder {
     margin: auto;
     text-align: center;
   }
+  .active:after {
+  }
   .home,
   .info,
   .proyects,
   .contact{
-    height: 100dvh;
     margin-top: 20px;
     margin-left: 0px;
-    display: block;
   }
-  
   .info h2{
     margin-bottom: 10px;
   }
   .infoContainer h3{
     font-size: 16px;
-    letter-spacing: 1px;
   }
   .proyectsContainer{
     flex-direction: column;
@@ -413,17 +409,11 @@ textarea::placeholder {
   .proyectItem {
     margin-top: 20px;
     background: var(--primary);
-    aspect-ratio: 19/11;
-    height: 400px;
+    aspect-ratio: 16/11;
     width: 250px;
   }
   .technologiesContainer{
-    width: 100%;
-  }
-  .technologies{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    width: 10%;
   }
   .msgContainer {
     height: 100%
@@ -440,12 +430,6 @@ textarea::placeholder {
   }
   .infoItem h3{
     font-size: 16px;
-
-  }
-  .open{
-    display: flex;
-    left: 0;
-    transition: 0.3s ease-in;
 
   }
 
